@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7f17610bc9551ca733ab16577609621b",
+    "revision": "c722b99ab9d3c6a8bd8c361079291d0b",
     "url": "/breaking-bad-react/index.html"
   },
   {
-    "revision": "789f1cdf0a1fe464a5f3",
+    "revision": "3ea0a35775ba927ce590",
     "url": "/breaking-bad-react/static/css/main.b78c1d14.chunk.css"
   },
   {
-    "revision": "c26ec6b6d34502fd0b56",
-    "url": "/breaking-bad-react/static/js/2.d4fe6915.chunk.js"
+    "revision": "d03dbef948321890bd1d",
+    "url": "/breaking-bad-react/static/js/2.7e638852.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/breaking-bad-react/static/js/2.d4fe6915.chunk.js.LICENSE.txt"
+    "url": "/breaking-bad-react/static/js/2.7e638852.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "789f1cdf0a1fe464a5f3",
-    "url": "/breaking-bad-react/static/js/main.4abbc1a6.chunk.js"
+    "revision": "3ea0a35775ba927ce590",
+    "url": "/breaking-bad-react/static/js/main.445f3fe8.chunk.js"
   },
   {
     "revision": "23a8f4d40c65217596b8",

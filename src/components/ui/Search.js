@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { breakpoint, map } from './../../breakpoints';
 
 const SearchBar = styled.section`
     margin-bottom: 50px;
@@ -11,13 +12,14 @@ const Input = styled.input`
     border: none;
     border-bottom: 1px solid #c7a65a;
     font-family: 'Libre Franklin', sans-serif;
-    padding: 10px 5px;
+    padding: 10px 5px 7px;
     color: #c7a65a;
     background-color: transparent;
     display: block;
     font-weight: bold;
     letter-spacing: .2px;
     width: 100%;
+    font-size: 16px;
 
     &::placeholder {
         color: #c7a65a;
@@ -27,11 +29,16 @@ const Input = styled.input`
         outline-style: thin;
         outline-color: #c7a65a;
     }
+
+    ${breakpoint('xl')`
+        font-size: 13px;
+    `};
 `;
 
 const Form = styled.form`
     position: relative;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
 `;
 

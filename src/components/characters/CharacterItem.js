@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoint, map } from './../../breakpoints';
 
 const CardWidth = 320;
 const CardHeight = 380;
 
 const CardFront = styled.div`
+    width: 100%;
     backface-visibility: hidden;
     position: absolute;
     transition: transform .6s;
@@ -32,10 +34,9 @@ const CardInner = styled.div`
 
 const Card = styled.div`
     width: 100%;
+    height: ${CardHeight}px;
     color: #fff;
     font-family: 'Libre Franklin', sans-serif;
-    height: ${CardHeight}px;
-    width: ${CardWidth}px;
     background-color: transparent;
     perspective: 1000px;
 
@@ -44,6 +45,15 @@ const Card = styled.div`
             transform: rotateY(180deg);
         }
     }
+`;
+
+const CardImg = styled.img`
+    width: 100%;
+    height: 100%;
+    min-height: ${CardHeight}px;
+    display: block;
+    object-fit: cover;
+    object-position: 0 0;
 `;
 
 const CardBackTitle = styled.h1`
@@ -64,17 +74,6 @@ const CardBackStatus = styled.p`
     font-size: 12px;
     margin-bottom: 10px;
     opacity: .5;
-`;
-
-const CardImg = styled.img`
-    width: 100%;
-    height: 100%;
-    max-height: ${CardHeight}px;
-    min-height: ${CardHeight}px;
-    min-width: ${CardWidth}px;
-    display: block;
-    object-fit: cover;
-    object-position: 0 0;
 `;
 
 const CharacterItem = ({ item, isOdd }) => {

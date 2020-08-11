@@ -2,13 +2,26 @@ import React from 'react';
 import CharacterItem from './CharacterItem';
 import Spinner from './../ui/Spinner';
 import styled from 'styled-components';
+import { breakpoint, map } from './../../breakpoints';
+
+const CardWidth = 320;
 
 const Cards = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-gap: 0 0;
+    grid-template-columns: repeat(1, ${CardWidth}px);
+    justify-content: center;
+
+    ${breakpoint('md')`
+        grid-template-columns: repeat(2, ${CardWidth}px);
+    `};
+
+    ${breakpoint('lg')`
+        grid-template-columns: repeat(3, ${CardWidth}px);
+    `};
+
+    ${breakpoint('xl')`
+        grid-template-columns: repeat(4, ${CardWidth}px);
+    `};
 `;
 
 const CharacterGrid = ({ isLoading, items }) => {

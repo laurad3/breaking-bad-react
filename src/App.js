@@ -9,7 +9,7 @@ import bg from './images/background.jpg';
 
 const Main = styled.div`
 	background-image: url(${bg});
-	padding: 50px 0;
+	padding: 50px 20px;
 	min-height: 100vh;
 `;
 

@@ -51,6 +51,7 @@ const CardImg = styled.img`
     width: 100%;
     height: 100%;
     min-height: ${CardHeight}px;
+    max-height: ${CardHeight}px;
     display: block;
     object-fit: cover;
     object-position: 0 0;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { breakpoint, map } from './../../breakpoints';
 
@@ -40,11 +40,13 @@ const Card = styled.div`
     background-color: transparent;
     perspective: 1000px;
 
-    &:hover {
-        ${CardInner} {
-            transform: rotateY(180deg);
+    ${breakpoint('md')`
+        &:hover {
+            ${CardInner} {
+                transform: rotateY(180deg);
+            }
         }
-    }
+    `};
 `;
 
 const CardImg = styled.img`
@@ -78,8 +80,25 @@ const CardBackStatus = styled.p`
 `;
 
 const CharacterItem = ({ item, isOdd }) => {
+    const [isFlipped, setIsFlipped] =  useState(false);
+
+    const flip = (target) => {
+        const cardInner = target.querySelector('.card__inner');
+        const windowSize = window.innerWidth;
+
+        if (windowSize < 1200) {
+            if (!isFlipped) {
+                setIsFlipped(true);
+                cardInner.style.transform = 'rotateY(180deg)';
+            } else {
+                setIsFlipped(false);
+                cardInner.style.transform = 'rotateY(0)';
+            }
+        }
+    };
+
     return(
-        <Card isOdd={isOdd} className="card">
+        <Card isOdd={isOdd} className="card" onClick={(e) => flip(e.currentTarget)}>
             <CardInner className="card__inner">
                 <CardFront className="card__front">
                     <CardImg src={item.img} alt={item.nickname} className="card__image" />
